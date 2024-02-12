@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,600;0,700;1,700&display=swap");
+
+:root {
+  --primary: rgb(132, 0, 255);
+  --bg: #010101;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg);
+  color: rgb(255, 255, 255);
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4em 7%;
+  position: fixed;
+  box-shadow: -1px 0 5px var(--primary);
+  position: fixed;
+  z-index: 999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2em;
+  color: var(--primary);
+  font-weight: 650;
+  font-style: italic;
+}
+.navbar .navbar-logo span {
+  color: white;
+}
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 550;
+  padding: 10px 10px;
+  margin: 0px 10px;
+}
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5em;
+  border-bottom: 0.2em solid var(--primary);
+  transform: scale(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-nav a:hover:after {
+  transform: scale(0.7);
+}
+.navbar .navbar-extra a {
+  font-size: 1.1em;
+  color: white;
+  margin: 0 0.6em;
+}
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+#menu {
+  display: none;
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.content {
+  padding: 1.4em 7%;
+}
+.content h1 {
+  font-size: 4em;
+}
+
+.content h1 span {
+  color: var(--primary);
+}
+
+.content p {
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.content a {
+  color: white;
+  background-color: var(--primary);
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: 20px;
+}
+
+.content a:hover {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.gambar img {
+  width: 100%;
+  height: 100%;
+  padding: 60px 100px 0 0px;
+}
+
+/* about section*/
+.about,
+.product,
+.contact {
+  padding: 4rem 7% 1.4rem;
+}
+.about h2,
+.product h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+.about h2 span,
+.product h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+  justify-content: center;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about .row .content {
+  flex: 1 1 80rem;
+  padding: 0 1rem;
+}
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* menu section */
+.product h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.product p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+.product .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+.product .row .product-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.product .row .product-card img {
+  border-radius: 5%;
+  width: 80%;
+}
+.product .row .product-card .product-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+/* contact section */
+.contact .row {
+  display: flex;
+  margin-top: 1rem;
+  background-color: #52525222;
+  align-items: center;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  padding: 3rem;
+  height: 30rem;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid white;
+  padding-left: 2rem;
+}
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  background: none;
+  color: white;
+}
+.contact .row form .btn {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.7rem;
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+  border-radius: 30px;
+  border: 1px solid var(--primary);
+}
+.contact .row form .btn:hover {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+}
+
+/* profile */
+aside.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 10% 1.4rem;
+  margin-bottom: 5rem;
+}
+aside.profile h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+aside.profile h2 span {
+  color: var(--primary);
+}
+aside.profile .card {
+  width: 15rem;
+  height: 20rem;
+  border-radius: 15px;
+}
+aside.profile .card .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card .card-inner .front,
+.card .card-inner .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: 7px -7px 10px var(--primary);
+}
+.card .card-inner .front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #fff;
+}
+.card .card-inner .front img {
+  margin-top: 2rem;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  padding: 0.2rem;
+  border: 2px solid var(--primary);
+  background-color: white;
+}
+.card-inner .front .teks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: black;
+}
+.card-inner .front .teks h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  color: var(--primary);
+}
+.card-inner .front .teks p {
+  font-size: 0.7rem;
+  padding: 0.2rem 1rem;
+  font-weight: 550;
+  text-align: center;
+}
+.card .card-inner .back {
+  background-color: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card .card-inner .back h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--primary);
+}
+.card .card-inner .back h3 {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.card .card-inner .back p {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+  font-weight: 550;
+  text-align: center;
+}
+.card .card-inner .back .icon {
+  font-size: 1.7rem;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+}
+.card .card-inner .back .icon i:hover {
+  color: var(--primary);
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
+footer .social {
+  padding: 1rem 0;
+}
+
+footer .social a {
+  color: white;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+footer .social a:hover {
+  color: var(--bg);
+}
+footer .link {
+  margin-bottom: 1.3rem;
+}
+footer .link a {
+  color: white;
+  padding: 0.7rem 1rem;
+  border: 1px solid transparent;
+}
+footer .link a:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 30px;
+}
+footer .credit {
+  font-size: 1rem;
+}
+footer .credit a {
+  color: white;
+}
+footer .credit a:hover {
+  background-color: rgb(0, 47, 255);
+}
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-family: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-family: 62.5%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30em;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5em;
+    padding: 0.5em;
+    font-size: 2em;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  .gambar img {
+    transform: scale(0);
+  }
+
+  /* about */
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .content {
+    padding: 0 1rem;
+  }
+  .about .row .content h3 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .about .row .content p {
+    font-size: 1.6rem;
+    text-align: justify;
+    margin-top: 2rem;
+  }
+  .about .row .about-img {
+    display: flex;
+    justify-content: center;
+  }
+  .about .row .about-img img {
+    width: 30rem;
+  }
+
+  .product p {
+    font-size: 1.2rem;
+  }
+
+  /* contact */
+  .contact .row {
+    flex-wrap: wrap;
+    padding: 0 2rem 2rem;
+  }
+
+  .contact .row .map {
+    height: 25rem;
+  }
+
+  .contact .row form {
+    padding: 0;
+  }
+
+  .contact .row .map {
+    padding-bottom: 0;
+  }
+}
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-family: 55%;
+    text-align: center;
+  }
+  .navbar .navbar-nav {
+    text-align: start;
+    position: absolute;
+    top: 100%;
+    right: -150%;
+    background-color: white;
+    width: 15em;
+    height: 400px;
+    transition: 0.3s;
+    padding: 1em;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 0em;
+    padding: 0.5em 0.5em;
+    font-size: 2em;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  .hero {
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    margin-bottom: -100px;
+    margin-left: 0.6rem;
+  }
+  .content {
+    padding: 0.1em 6%;
+  }
+  .content h1 {
+    font-size: 3.5em;
+  }
+  .contact .row {
+    padding: 2rem 0;
+    width: 20rem;
+    margin-left: 0.5rem;
+  }
+  .contact .row .map {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    padding: 0rem;
+  }
+  .contact .row form .input-group input {
+    padding: 1.2rem;
+  }
+  .about .row .about-img img {
+    width: 20rem;
+  }
+}
